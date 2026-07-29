@@ -1,0 +1,19 @@
+import canonicalLaneMathlib.AdmissibleClass
+import BooleanFunctions94d99NoneAboveCanonicalLaneLean.Fourier
+import BooleanFunctions94d99NoneAboveCanonicalLaneLean.Influence
+import BooleanFunctions94d99NoneAboveCanonicalLaneLean.NoiseStability
+import BooleanFunctions94d99NoneAboveCanonicalLaneLean.Learning
+import BooleanFunctions94d99NoneAboveCanonicalLaneLean.Junta
+
+namespace HautevilleHouse
+namespace BooleanFunctions94d99NoneAboveCanonicalLaneLean
+
+def ConstrainedBooleanFunctionsClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem constrained_boolean_functions_endgame (A : AdmissibleClass) :
+    ConstrainedBooleanFunctionsClosure A :=
+  And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end BooleanFunctions94d99NoneAboveCanonicalLaneLean
+end HautevilleHouse
